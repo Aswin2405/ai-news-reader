@@ -57,7 +57,7 @@ const App = () => {
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
             Created by
-            <a className={classes.link} href="https://www.linkedin.com/in/aswin-r-53720a1ba/">  Aswin-Kamalesh-Kasim Fayas-Arun Prakash</a>
+            <a className={classes.link} href="https://www.linkedin.com/in/aswin-r-53720a1ba/">Aswin</a>
           </Typography>
           <img className={classes.image} src="https://www.androidpolice.com/wp-content/uploads/2015/06/nexus2cee_Hound-Thumb.png" height="50px" alt="logo" />
         </div>
