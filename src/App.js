@@ -14,10 +14,9 @@ const App = () => {
 
   useEffect(() => {
     alanBtn({
-      key: '285b46670937fa651536d484d3298f122e956eca572e1d8b807a3e2338fdd0dc/stage',
+      key: '1222910db44bc9ed1536d484d3298f122e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: ({ command, articles, number }) => {
         if (command === 'newHeadlines') {
-          setNewsArticles(articles);
           setActiveArticle(-1);
         } else if (command === 'instructions') {
           setIsOpen(true);
@@ -43,7 +42,7 @@ const App = () => {
   return (
     <div>
       <div className={classes.logoContainer}>
-        {newsArticles.length ? (
+        {newsArticles?.length ? (
           <div className={classes.infoContainer}>
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Open article number [4]</Typography></div>
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
@@ -53,7 +52,7 @@ const App = () => {
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
-      {!newsArticles.length ? (
+      {!newsArticles?.length ? (
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
             Created by
